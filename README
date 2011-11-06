@@ -1,0 +1,29 @@
+Sample Usage - in place editing:
+
+    cat sample.sql | ./sqltidy
+
+Sample Usage - file mode:
+
+    ./sqltidy sample.sql
+
+
+For additional usage information, run:
+./sqltidy --help
+
+DEVELOPER NOTES:
+
+This tool takes SQL and reformats it in an aesthetically pleasing way.
+It doesn't follow any standard formatting convention, nor is it even
+that consistent with itself (lots of special cases), but it makes SQL
+much more bearable to look at.
+
+The script tries to leave the original code alone as much as possible.
+It doesn't make any obnoxious capitalization changes or add in any new
+keywords.
+
+The best implementation of this tool will be able to parse SQL as well
+as an interpreter, and know all about all the keywords and functions.
+This script is nothing like that.  It's just a quick hackjob that does
+basic tokenization and tries to fail gracefully when it's not smart
+enough.
+
